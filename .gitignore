@@ -24,3 +24,5 @@
 /Placement_Policy/obj/project.assets.json
 /Placement_PolicyAPI/obj/Debug/net8.0/staticwebassets.build.json
 /Placement_PolicyAPI/obj/Placement_PolicyAPI.csproj.nuget.dgspec.json
+/Placement_Policy/obj/Debug/net8.0/Placement_Policy.AssemblyInfo.cs
+/Placement_PolicyAPI/obj/Debug/net8.0/PolicyAPI.AssemblyInfo.cs
