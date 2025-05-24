@@ -15,7 +15,7 @@ namespace PolicyAPI.Controllers
         }
 
         [HttpPost("CheckEligibility")]
-        public ActionResult<List<EligibilityResult>> CheckEligibility()
+        public ActionResult<List<EligibilityResultDTO>> CheckEligibility()
         {
             try
             {

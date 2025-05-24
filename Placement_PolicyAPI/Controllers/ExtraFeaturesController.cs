@@ -16,7 +16,7 @@ namespace PolicyAPI.Controllers
         }
 
         [HttpPost("check-single-eligibility")]
-        public ActionResult<EligibilityResult> CheckSingleEligibility([FromBody] SingleEligibilityRequest request)
+        public ActionResult<EligibilityResultDTO> CheckSingleEligibility([FromBody] SingleEligibilityRequestDTO request)
         {
             try
             {
@@ -49,7 +49,7 @@ namespace PolicyAPI.Controllers
         }
 
         [HttpPost("placement-stats")]
-        public ActionResult<PlacementStats> GetPlacementStats([FromBody] List<Student> students)
+        public ActionResult<PlacementStatusDTO> GetPlacementStats([FromBody] List<StudentDTO> students)
         {
             try
             {
@@ -63,25 +63,25 @@ namespace PolicyAPI.Controllers
         }
 
         [HttpGet("sample-policy-config")]
-        public ActionResult<PolicyConfiguration> GetSamplePolicyConfiguration()
+        public ActionResult<PolicyConfigurationDTO> GetSamplePolicyConfiguration()
         {
-            var sampleConfig = new PolicyConfiguration
+            var sampleConfig = new PolicyConfigurationDTO
             {
-                MaxCompanies = new MaxCompaniesPolicy { Enabled = true, MaxApplications = 3 },
-                DreamOffer = new DreamOfferPolicy { Enabled = true },
-                DreamCompany = new DreamCompanyPolicy { Enabled = true },
-                CgpaThreshold = new CgpaThresholdPolicy
+                MaxCompanies = new MaxCompaniesPolicyDTO { Enabled = true, MaxApplications = 3 },
+                DreamOffer = new DreamOfferPolicyDTO { Enabled = true },
+                DreamCompany = new DreamCompanyPolicyDTO { Enabled = true },
+                CgpaThreshold = new CgpaThresholdPolicyDTO
                 {
                     Enabled = true,
                     MinimumCgpa = 7.5,
                     HighSalaryThreshold = 3000000
                 },
-                PlacementPercentage = new PlacementPercentagePolicy
+                PlacementPercentage = new PlacementPercentagePolicyDTO
                 {
                     Enabled = false,
                     TargetPercentage = 85.0
                 },
-                OfferCategory = new OfferCategoryPolicy
+                OfferCategory = new OfferCategoryPolicyDTO
                 {
                     Enabled = true,
                     L1Threshold = 4000000,
@@ -94,22 +94,22 @@ namespace PolicyAPI.Controllers
         }
 
         [HttpGet("sample-companies")]
-        public ActionResult<List<Company>> GetSampleCompanies()
+        public ActionResult<List<CompanyDTO>> GetSampleCompanies()
         {
-            var sampleCompanies = new List<Company>
+            var sampleCompanies = new List<CompanyDTO>
             {
-                new Company { Id = 1, Name = "Google", SalaryOffered = 5500000, Category = "Product", IsHighPaying = true },
-                new Company { Id = 2, Name = "Microsoft", SalaryOffered = 5000000, Category = "Product", IsHighPaying = true },
-                new Company { Id = 3, Name = "Amazon", SalaryOffered = 4500000, Category = "Product", IsHighPaying = true },
-                new Company { Id = 4, Name = "Apple", SalaryOffered = 6000000, Category = "Product", IsHighPaying = true },
-                new Company { Id = 5, Name = "Meta", SalaryOffered = 5200000, Category = "Product", IsHighPaying = true },
-                new Company { Id = 6, Name = "Netflix", SalaryOffered = 4800000, Category = "Product", IsHighPaying = true },
-                new Company { Id = 7, Name = "Tesla", SalaryOffered = 4200000, Category = "Product", IsHighPaying = true },
-                new Company { Id = 8, Name = "Uber", SalaryOffered = 3500000, Category = "Product", IsHighPaying = true },
-                new Company { Id = 9, Name = "Flipkart", SalaryOffered = 2800000, Category = "Product", IsHighPaying = false },
-                new Company { Id = 10, Name = "Paytm", SalaryOffered = 2200000, Category = "Fintech", IsHighPaying = false },
-                new Company { Id = 11, Name = "TCS", SalaryOffered = 800000, Category = "Service", IsHighPaying = false },
-                new Company { Id = 12, Name = "Infosys", SalaryOffered = 900000, Category = "Service", IsHighPaying = false }
+                new CompanyDTO { Id = 1, Name = "Google", SalaryOffered = 5500000, Category = "Product", IsHighPaying = true },
+                new CompanyDTO { Id = 2, Name = "Microsoft", SalaryOffered = 5000000, Category = "Product", IsHighPaying = true },
+                new CompanyDTO { Id = 3, Name = "Amazon", SalaryOffered = 4500000, Category = "Product", IsHighPaying = true },
+                new CompanyDTO { Id = 4, Name = "Apple", SalaryOffered = 6000000, Category = "Product", IsHighPaying = true },
+                new CompanyDTO { Id = 5, Name = "Meta", SalaryOffered = 5200000, Category = "Product", IsHighPaying = true },
+                new CompanyDTO { Id = 6, Name = "Netflix", SalaryOffered = 4800000, Category = "Product", IsHighPaying = true },
+                new CompanyDTO { Id = 7, Name = "Tesla", SalaryOffered = 4200000, Category = "Product", IsHighPaying = true },
+                new CompanyDTO { Id = 8, Name = "Uber", SalaryOffered = 3500000, Category = "Product", IsHighPaying = true },
+                new CompanyDTO { Id = 9, Name = "Flipkart", SalaryOffered = 2800000, Category = "Product", IsHighPaying = false },
+                new CompanyDTO { Id = 10, Name = "Paytm", SalaryOffered = 2200000, Category = "Fintech", IsHighPaying = false },
+                new CompanyDTO { Id = 11, Name = "TCS", SalaryOffered = 800000, Category = "Service", IsHighPaying = false },
+                new CompanyDTO { Id = 12, Name = "Infosys", SalaryOffered = 900000, Category = "Service", IsHighPaying = false }
             };
 
             return Ok(sampleCompanies);

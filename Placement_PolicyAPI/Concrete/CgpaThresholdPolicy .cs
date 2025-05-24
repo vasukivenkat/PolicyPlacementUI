@@ -5,22 +5,22 @@ namespace PolicyAPI.Concrete
 {
     public class CgpaThresholdPolicy: IEligibilityPolicy
     {
-        public PolicyEvaluationResult Evaluate(Student student, Company company, PolicyConfiguration policies, double currentPlacementPercentage)
+        public PolicyEvaluationResultDTO Evaluate(StudentDTO student, CompanyDTO company, PolicyConfigurationDTO policies, double currentPlacementPercentage)
         {
             if (!policies.CgpaThreshold.Enabled)
-                return PolicyEvaluationResult.Success();
+                return PolicyEvaluationResultDTO.Success();
 
             if (company.SalaryOffered < policies.CgpaThreshold.HighSalaryThreshold)
-                return PolicyEvaluationResult.Success();
+                return PolicyEvaluationResultDTO.Success();
 
             if (student.Cgpa < policies.CgpaThreshold.MinimumCgpa)
             {
-                return PolicyEvaluationResult.Failure(
+                return PolicyEvaluationResultDTO.Failure(
                     $"CGPA {student.Cgpa} below minimum {policies.CgpaThreshold.MinimumCgpa} for high-paying positions"
                 );
             }
 
-            return PolicyEvaluationResult.Success(
+            return PolicyEvaluationResultDTO.Success(
                 $"CGPA {student.Cgpa} meets minimum requirement for high-paying position"
             );
         }

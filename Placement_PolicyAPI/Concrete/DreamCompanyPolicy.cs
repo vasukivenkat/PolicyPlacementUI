@@ -5,16 +5,16 @@ namespace PolicyAPI.Concrete
 {
     public class DreamCompanyPolicy: IEligibilityPolicy
     {
-        public PolicyEvaluationResult Evaluate(Student student, Company company, PolicyConfiguration policies, double currentPlacementPercentage)
+        public PolicyEvaluationResultDTO Evaluate(StudentDTO student, CompanyDTO company, PolicyConfigurationDTO policies, double currentPlacementPercentage)
         {
             if (!policies.DreamCompany.Enabled)
-                return PolicyEvaluationResult.Success();
+                return PolicyEvaluationResultDTO.Success();
 
             bool isDreamCompany = string.Equals(company.Name, student.DreamCompany, StringComparison.OrdinalIgnoreCase);
 
             if (isDreamCompany)
             {
-                return new PolicyEvaluationResult
+                return new PolicyEvaluationResultDTO
                 {
                     Passed = true,
                     Blocking = false, // Not blocking others; this overrides them
@@ -22,7 +22,7 @@ namespace PolicyAPI.Concrete
                 };
             }
 
-            return PolicyEvaluationResult.Success(); // Not a dream company; nothing to block
+            return PolicyEvaluationResultDTO.Success(); // Not a dream company; nothing to block
         }
 
     }

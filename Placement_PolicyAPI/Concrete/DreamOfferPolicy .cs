@@ -5,19 +5,19 @@ namespace PolicyAPI.Concrete
 {
     public class DreamOfferPolicy: IEligibilityPolicy
     {
-        public PolicyEvaluationResult Evaluate(Student student, Company company, PolicyConfiguration policies, double currentPlacementPercentage)
+        public PolicyEvaluationResultDTO Evaluate(StudentDTO student, CompanyDTO company, PolicyConfigurationDTO policies, double currentPlacementPercentage)
         {
             if (!policies.DreamOffer.Enabled)
-                return PolicyEvaluationResult.Success();
+                return PolicyEvaluationResultDTO.Success();
 
             if (company.SalaryOffered >= student.DreamOffer)
             {
-                return PolicyEvaluationResult.Success(
+                return PolicyEvaluationResultDTO.Success(
                     $"Company salary ₹{company.SalaryOffered:N0} meets dream offer ₹{student.DreamOffer:N0}"
                 );
             }
 
-            return PolicyEvaluationResult.Failure(
+            return PolicyEvaluationResultDTO.Failure(
                 $"Company salary ₹{company.SalaryOffered:N0} below dream offer ₹{student.DreamOffer:N0}"
             );
         }

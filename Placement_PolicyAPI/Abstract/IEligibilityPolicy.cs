@@ -4,6 +4,6 @@ namespace PolicyAPI.Abstract
 {
     public interface IEligibilityPolicy
     {
-        PolicyEvaluationResult Evaluate(Student student, Company company, PolicyConfiguration policies, double currentPlacementPercentage);
+        PolicyEvaluationResultDTO Evaluate(StudentDTO student, CompanyDTO company, PolicyConfigurationDTO policies, double currentPlacementPercentage);
     }
 }

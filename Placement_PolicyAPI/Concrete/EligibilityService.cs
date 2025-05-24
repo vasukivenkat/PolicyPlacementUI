@@ -5,9 +5,9 @@ namespace PolicyAPI.Concrete
 {
     public class EligibilityService : IEligibilityService
     {
-        public EligibilityResult CheckEligibility(Student student, Company company, PolicyConfiguration policies, double currentPlacementPercentage)
+        public EligibilityResultDTO CheckEligibility(StudentDTO student, CompanyDTO company, PolicyConfigurationDTO policies, double currentPlacementPercentage)
         {
-            var result = new EligibilityResult
+            var result = new EligibilityResultDTO
             {
                 StudentId = student.Id,
                 StudentName = student.Name,
@@ -174,9 +174,9 @@ namespace PolicyAPI.Concrete
             //return result;
         }
 
-        public List<EligibilityResult> CheckBulkEligibility(List<Student> students, List<Company> companies, PolicyConfiguration policies, double currentPlacementPercentage)
+        public List<EligibilityResultDTO> CheckBulkEligibility(List<StudentDTO> students, List<CompanyDTO> companies, PolicyConfigurationDTO policies, double currentPlacementPercentage)
         {
-            var results = new List<EligibilityResult>();
+            var results = new List<EligibilityResultDTO>();
 
             foreach (var student in students)
             {
@@ -189,13 +189,13 @@ namespace PolicyAPI.Concrete
             return results;
         }
 
-        public PlacementStats GetPlacementStats(List<Student> students)
+        public PlacementStatusDTO GetPlacementStats(List<StudentDTO> students)
         {
             var totalStudents = students.Count;
             var placedStudents = students.Count(s => s.IsPlaced);
             var placementPercentage = totalStudents > 0 ? (double)placedStudents / totalStudents * 100 : 0;
 
-            return new PlacementStats
+            return new PlacementStatusDTO
             {
                 TotalStudents = totalStudents,
                 PlacedStudents = placedStudents,
@@ -203,7 +203,7 @@ namespace PolicyAPI.Concrete
             };
         }
 
-        private string GetOfferTier(decimal salary, OfferCategoryPolicy policy)
+        private string GetOfferTier(decimal salary, OfferCategoryPolicyDTO policy)
         {
             if (salary >= policy.L1Threshold) return "L1";
             if (salary >= policy.L2Threshold) return "L2";
