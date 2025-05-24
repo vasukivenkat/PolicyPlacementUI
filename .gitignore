@@ -5,7 +5,6 @@
 *.vsidx
 *.cache
 *.editorconfig
-*.json
 *.dll
 *.props
 *.Up2Date
@@ -14,7 +13,14 @@
 *.exe
 *.targets
 *.pdb
-*.cs
 *.config
 *.suo
 *.v2
+/Placement_PolicyAPI/obj/PolicyAPI.csproj.nuget.dgspec.json
+/Placement_PolicyAPI/obj/project.assets.json
+/.vs/Placement_Policy/v17/DocumentLayout.backup.json
+/.vs/Placement_Policy/v17/DocumentLayout.json
+/Placement_Policy/obj/Placement_Policy.csproj.nuget.dgspec.json
+/Placement_Policy/obj/project.assets.json
+/Placement_PolicyAPI/obj/Debug/net8.0/staticwebassets.build.json
+/Placement_PolicyAPI/obj/Placement_PolicyAPI.csproj.nuget.dgspec.json
