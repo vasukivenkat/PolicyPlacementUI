@@ -56,6 +56,7 @@ namespace PolicyAPI.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
+
         [HttpGet("GetPolicyConfiguration")]
         public ActionResult<PolicyConfigurationDTO> GetPolicyConfiguration()
         {
