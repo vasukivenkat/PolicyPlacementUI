@@ -75,7 +75,7 @@ namespace PolicyAPI.Controllers
         {
             try
             {
-                var results = _dataService.GetPlacementPercent();
+                var results = _eligibilityService.GetPlacementStats(_dataService.GetStudents());
                 return Ok(results);
             }
             catch (Exception ex)

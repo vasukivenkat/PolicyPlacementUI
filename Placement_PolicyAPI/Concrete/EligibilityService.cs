@@ -87,12 +87,5 @@ namespace PolicyAPI.Concrete
                 PlacementPercentage = Math.Round(placementPercentage, 2)
             };
         }
-
-        private string GetOfferTier(decimal salary, OfferCategoryPolicyDTO policy)
-        {
-            if (salary >= policy.L1Threshold) return "L1";
-            if (salary >= policy.L2Threshold) return "L2";
-            return "L3";
-        }
     }
 }
