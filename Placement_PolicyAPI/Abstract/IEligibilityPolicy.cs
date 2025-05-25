@@ -1,4 +1,4 @@
-﻿using PolicyAPI.Models;
+﻿using PolicyAPI.DTOs;
 
 namespace PolicyAPI.Abstract
 {

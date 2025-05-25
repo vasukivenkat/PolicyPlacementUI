@@ -1,5 +1,5 @@
 ﻿using PolicyAPI.Abstract;
-using PolicyAPI.Models;
+using PolicyAPI.DTOs;
 
 namespace PolicyAPI.Concrete
 {

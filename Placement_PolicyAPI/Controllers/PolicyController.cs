@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PolicyAPI.Abstract;
-using PolicyAPI.Models;
+using PolicyAPI.DTOs;
 
 namespace PolicyAPI.Controllers
 {

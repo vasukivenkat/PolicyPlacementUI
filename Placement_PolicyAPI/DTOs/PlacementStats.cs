@@ -1,4 +1,4 @@
-﻿namespace PolicyAPI.Models
+﻿namespace PolicyAPI.DTOs
 {
     public class PlacementStats
     {
