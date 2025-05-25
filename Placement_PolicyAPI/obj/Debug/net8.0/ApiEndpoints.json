@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "PolicyAPI.Controllers.PolicyController",
+    "ContainingType": "PolicyAPI.Controllers.ExtraFeaturesController",
     "Method": "CheckSingleEligibility",
     "RelativePath": "check-single-eligibility",
     "HttpMethod": "POST",
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "ContainingType": "PolicyAPI.Controllers.PolicyController",
+    "ContainingType": "PolicyAPI.Controllers.ExtraFeaturesController",
     "Method": "GetPlacementStats",
     "RelativePath": "placement-stats",
     "HttpMethod": "POST",
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "ContainingType": "PolicyAPI.Controllers.PolicyController",
+    "ContainingType": "PolicyAPI.Controllers.ExtraFeaturesController",
     "Method": "GetSampleCompanies",
     "RelativePath": "sample-companies",
     "HttpMethod": "GET",
@@ -92,7 +92,7 @@
     ]
   },
   {
-    "ContainingType": "PolicyAPI.Controllers.PolicyController",
+    "ContainingType": "PolicyAPI.Controllers.ExtraFeaturesController",
     "Method": "GetSamplePolicyConfiguration",
     "RelativePath": "sample-policy-config",
     "HttpMethod": "GET",
