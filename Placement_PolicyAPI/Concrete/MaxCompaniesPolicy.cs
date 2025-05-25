@@ -11,12 +11,12 @@ namespace PolicyAPI.Concrete
                 return PolicyEvaluationResultDTO.Success();
 
             if (policies.MaxCompanies.MaxApplications == 0)
-                return PolicyEvaluationResultDTO.Failure("Placed students cannot apply to any additional companies");
+                return PolicyEvaluationResultDTO.Failure("Placed students cannot apply to any additional companies",false);
 
             if (student.CompaniesApplied >= policies.MaxCompanies.MaxApplications)
-                return PolicyEvaluationResultDTO.Failure($"Already applied to {student.CompaniesApplied}/{policies.MaxCompanies.MaxApplications} companies");
+                return PolicyEvaluationResultDTO.Failure($"Already applied to {student.CompaniesApplied}/{policies.MaxCompanies.MaxApplications} companies", false);
 
-            return PolicyEvaluationResultDTO.Success($"Applied to {student.CompaniesApplied}/{policies.MaxCompanies.MaxApplications}");
+            return PolicyEvaluationResultDTO.Success($"Applied to {student.CompaniesApplied}/{policies.MaxCompanies.MaxApplications}", true);
         }
     }
 }

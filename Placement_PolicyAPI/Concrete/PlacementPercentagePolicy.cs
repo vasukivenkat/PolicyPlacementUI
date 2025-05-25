@@ -13,7 +13,7 @@ namespace PolicyAPI.Concrete
             if (currentPlacementPercentage < policies.PlacementPercentage.TargetPercentage)
             {
                 return PolicyEvaluationResultDTO.Failure(
-                    $"Current placement percentage {currentPlacementPercentage:F1}% below target {policies.PlacementPercentage.TargetPercentage}%"
+                    $"Current placement percentage {currentPlacementPercentage:F1}% below target {policies.PlacementPercentage.TargetPercentage}%",false
                 );
             }
 

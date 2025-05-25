@@ -16,12 +16,12 @@ namespace PolicyAPI.Concrete
             if (student.Cgpa < policies.CgpaThreshold.MinimumCgpa)
             {
                 return PolicyEvaluationResultDTO.Failure(
-                    $"CGPA {student.Cgpa} below minimum {policies.CgpaThreshold.MinimumCgpa} for high-paying positions"
+                    $"CGPA {student.Cgpa} is not enough - minimum {policies.CgpaThreshold.MinimumCgpa} is needed for high-paying positions",false
                 );
             }
 
             return PolicyEvaluationResultDTO.Success(
-                $"CGPA {student.Cgpa} meets minimum requirement for high-paying position"
+                $"CGPA {student.Cgpa} meets minimum requirement for high-paying position",true
             );
         }
     }

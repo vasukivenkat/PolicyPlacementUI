@@ -6,7 +6,7 @@
         public string Reason { get; set; } = string.Empty;
         public bool Blocking { get; set; }
 
-        public static PolicyEvaluationResultDTO Success(string reason = "", bool blocking = false) =>
+        public static PolicyEvaluationResultDTO Success(string reason = "", bool blocking = true) =>
             new PolicyEvaluationResultDTO { Passed = true, Reason = reason, Blocking = blocking };
 
         public static PolicyEvaluationResultDTO Failure(string reason, bool blocking = true) =>

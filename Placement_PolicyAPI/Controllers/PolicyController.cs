@@ -19,14 +19,8 @@ namespace PolicyAPI.Controllers
         {
             try
             {
-              
-                var results = _eligibilityService.CheckBulkEligibility(
-                    _dataService.GetStudentsFromJson(),
-                    _dataService.GetSampleCompanies(),
-                    _dataService.GetPolicyConfiguration(),
-                    20
-                );
-
+                var results = _eligibilityService.CheckBulkEligibility( _dataService.GetStudents(), 
+                    _dataService.GetCompanies(), _dataService.GetPolicyConfiguration(),_dataService.GePlacementPercent());
                 return Ok(results);
             }
             catch (Exception ex)

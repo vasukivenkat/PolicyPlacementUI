@@ -14,13 +14,10 @@ namespace PolicyAPI.Concrete
 
             if (isDreamCompany)
             {
-                return new PolicyEvaluationResultDTO
-                {
-                    Passed = true,
-                    Blocking = false, // Not blocking others; this overrides them
-                    Reason = $"Applying to dream company '{student.DreamCompany}' - overrides other restrictions"
-                };
-            }
+                // Not blocking others; this overrides them
+                return PolicyEvaluationResultDTO.Success(
+                    $"Applying to dream company '{student.DreamCompany}' - overrides other restrictions", false);
+            };
 
             return PolicyEvaluationResultDTO.Success(); // Not a dream company; nothing to block
         }

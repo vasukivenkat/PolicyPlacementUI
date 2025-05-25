@@ -5,7 +5,7 @@ namespace PolicyAPI.Concrete
 {
     public class DataService:IDataService
     {
-        public List<StudentDTO> GetStudentsFromJson()
+        public List<StudentDTO> GetStudents()
         {
             // Your actual student data
             return new List<StudentDTO>
@@ -38,7 +38,7 @@ namespace PolicyAPI.Concrete
             };
         }
 
-        public List<CompanyDTO> GetSampleCompanies()
+        public List<CompanyDTO> GetCompanies()
         {
             return new List<CompanyDTO>
             {
@@ -78,6 +78,14 @@ namespace PolicyAPI.Concrete
             config.OfferCategory.RequiredHikePercentageForL2 = 15.0;
 
             return config;
+        }
+
+        public double GePlacementPercent() {
+            List<StudentDTO> students = new List<StudentDTO>();
+            students.AddRange(GetStudents());
+            double percentage = (students.Where(x=> x.IsPlaced).Count()/students.Count) * 100;
+
+            return percentage;
         }
     }
 }

@@ -4,8 +4,9 @@ namespace PolicyAPI.Abstract
 {
     public interface IDataService
     {
-        List<StudentDTO> GetStudentsFromJson();
-        List<CompanyDTO> GetSampleCompanies();
+        List<StudentDTO> GetStudents();
+        List<CompanyDTO> GetCompanies();
         PolicyConfigurationDTO GetPolicyConfiguration();
+        double GePlacementPercent();
     }
 }
