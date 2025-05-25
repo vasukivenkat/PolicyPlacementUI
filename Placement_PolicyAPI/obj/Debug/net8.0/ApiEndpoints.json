@@ -2,7 +2,7 @@
   {
     "ContainingType": "PolicyAPI.Controllers.PolicyController",
     "Method": "CheckEligibility",
-    "RelativePath": "CheckEligibility",
+    "RelativePath": "api/Policy/CheckEligibility",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -22,7 +22,7 @@
   {
     "ContainingType": "PolicyAPI.Controllers.PolicyController",
     "Method": "GetCompanies",
-    "RelativePath": "GetCompanies",
+    "RelativePath": "api/Policy/GetCompanies",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -42,7 +42,7 @@
   {
     "ContainingType": "PolicyAPI.Controllers.PolicyController",
     "Method": "GetPlacementPercent",
-    "RelativePath": "GetPlacementPercentage",
+    "RelativePath": "api/Policy/GetPlacementPercentage",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -62,7 +62,7 @@
   {
     "ContainingType": "PolicyAPI.Controllers.PolicyController",
     "Method": "GetPolicyConfiguration",
-    "RelativePath": "GetPolicyConfiguration",
+    "RelativePath": "api/Policy/GetPolicyConfiguration",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -82,7 +82,7 @@
   {
     "ContainingType": "PolicyAPI.Controllers.PolicyController",
     "Method": "GetStudents",
-    "RelativePath": "GetStudents",
+    "RelativePath": "api/Policy/GetStudents",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

@@ -14,7 +14,7 @@ namespace PolicyAPI.Controllers
             _dataService = dataService;
         }
 
-        [HttpGet("CheckEligibility")]
+        [HttpGet("/api/Policy/CheckEligibility")]
         public ActionResult<List<EligibilityResultDTO>> CheckEligibility()
         {
             try
@@ -29,7 +29,7 @@ namespace PolicyAPI.Controllers
             }
         }
 
-        [HttpGet("GetStudents")]
+        [HttpGet("/api/Policy/GetStudents")]
         public ActionResult<List<StudentDTO>> GetStudents()
         {
             try
@@ -43,7 +43,7 @@ namespace PolicyAPI.Controllers
             }
         }
       
-        [HttpGet("GetCompanies")]
+        [HttpGet("/api/Policy/GetCompanies")]
         public ActionResult<List<CompanyDTO>> GetCompanies()
         {
             try
@@ -57,7 +57,7 @@ namespace PolicyAPI.Controllers
             }
         }
 
-        [HttpGet("GetPolicyConfiguration")]
+        [HttpGet("/api/Policy/GetPolicyConfiguration")]
         public ActionResult<PolicyConfigurationDTO> GetPolicyConfiguration()
         {
             try
@@ -71,7 +71,7 @@ namespace PolicyAPI.Controllers
             }
         }
 
-        [HttpGet("GetPlacementPercentage")]
+        [HttpGet("/api/Policy/GetPlacementPercentage")]
         public ActionResult<double> GetPlacementPercent()
         {
             try
