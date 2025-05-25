@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Placement_Policy", "Placement_Policy\Placement_Policy.csproj", "{972DA2EF-1F1D-4A92-8E61-121E62A9F426}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolicyAPI", "Placement_PolicyAPI\PolicyAPI.csproj", "{57B6BACA-B9DA-4466-9B96-E4F61A43FF00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolicyAPI", "Placement_PolicyAPI\PolicyAPI.csproj", "{57B6BACA-B9DA-4466-9B96-E4F61A43FF00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{972DA2EF-1F1D-4A92-8E61-121E62A9F426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{972DA2EF-1F1D-4A92-8E61-121E62A9F426}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{972DA2EF-1F1D-4A92-8E61-121E62A9F426}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{972DA2EF-1F1D-4A92-8E61-121E62A9F426}.Release|Any CPU.Build.0 = Release|Any CPU
 		{57B6BACA-B9DA-4466-9B96-E4F61A43FF00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{57B6BACA-B9DA-4466-9B96-E4F61A43FF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57B6BACA-B9DA-4466-9B96-E4F61A43FF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
