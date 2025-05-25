@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hxtreme\\source\\repos\\Placement_Policy\\Placement_PolicyAPI\\PolicyAPI.csproj": {}
+    "C:\\Users\\Hxtreme\\source\\repos\\Placement_Policy\\PolicyAPI\\PolicyAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hxtreme\\source\\repos\\Placement_Policy\\Placement_PolicyAPI\\PolicyAPI.csproj": {
+    "C:\\Users\\Hxtreme\\source\\repos\\Placement_Policy\\PolicyAPI\\PolicyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hxtreme\\source\\repos\\Placement_Policy\\Placement_PolicyAPI\\PolicyAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Hxtreme\\source\\repos\\Placement_Policy\\PolicyAPI\\PolicyAPI.csproj",
         "projectName": "PolicyAPI",
-        "projectPath": "C:\\Users\\Hxtreme\\source\\repos\\Placement_Policy\\Placement_PolicyAPI\\PolicyAPI.csproj",
+        "projectPath": "C:\\Users\\Hxtreme\\source\\repos\\Placement_Policy\\PolicyAPI\\PolicyAPI.csproj",
         "packagesPath": "C:\\Users\\Hxtreme\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hxtreme\\source\\repos\\Placement_Policy\\Placement_PolicyAPI\\obj\\",
+        "outputPath": "C:\\Users\\Hxtreme\\source\\repos\\Placement_Policy\\PolicyAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hxtreme\\AppData\\Roaming\\NuGet\\NuGet.Config",
