@@ -8,9 +8,11 @@ namespace PolicyAPI.Concrete.PolicyTypes
         {
             return new List<IEligibilityPolicy>
             {
+                //Primary eligibility checks (must be evaluated first)
                 new CgpaThresholdPolicy(),
                 new DreamCompanyPolicy(),
                 new DreamOfferPolicy(),
+                //Secondary eligibility checks (evaluated after primary ones)
                 new PlacementPercentagePolicy(),
                 new MaxCompaniesPolicy(),
                 new OfferTierPolicy()
