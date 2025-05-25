@@ -80,10 +80,11 @@ namespace PolicyAPI.Concrete
             return config;
         }
 
-        public double GePlacementPercent() {
+        public double GetPlacementPercent() {
             List<StudentDTO> students = new List<StudentDTO>();
             students.AddRange(GetStudents());
-            double percentage = (students.Where(x=> x.IsPlaced).Count()/students.Count) * 100;
+            double placedStudents = students.Where(x => x.IsPlaced).Count();
+            double percentage = (placedStudents / students.Count) * 100;
 
             return percentage;
         }

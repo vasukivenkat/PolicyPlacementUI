@@ -7,6 +7,6 @@ namespace PolicyAPI.Abstract
         List<StudentDTO> GetStudents();
         List<CompanyDTO> GetCompanies();
         PolicyConfigurationDTO GetPolicyConfiguration();
-        double GePlacementPercent();
+        double GetPlacementPercent();
     }
 }

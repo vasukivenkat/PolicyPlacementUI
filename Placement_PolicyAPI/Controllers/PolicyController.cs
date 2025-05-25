@@ -14,13 +14,13 @@ namespace PolicyAPI.Controllers
             _dataService = dataService;
         }
 
-        [HttpPost("CheckEligibility")]
+        [HttpGet("CheckEligibility")]
         public ActionResult<List<EligibilityResultDTO>> CheckEligibility()
         {
             try
             {
                 var results = _eligibilityService.CheckBulkEligibility( _dataService.GetStudents(), 
-                    _dataService.GetCompanies(), _dataService.GetPolicyConfiguration(),_dataService.GePlacementPercent());
+                    _dataService.GetCompanies(), _dataService.GetPolicyConfiguration(),_dataService.GetPlacementPercent());
                 return Ok(results);
             }
             catch (Exception ex)
@@ -29,6 +29,60 @@ namespace PolicyAPI.Controllers
             }
         }
 
+        [HttpGet("GetStudents")]
+        public ActionResult<List<StudentDTO>> GetStudents()
+        {
+            try
+            {
+                var results = _dataService.GetStudents();
+                return Ok(results);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
       
+        [HttpGet("GetCompanies")]
+        public ActionResult<List<CompanyDTO>> GetCompanies()
+        {
+            try
+            {
+                var results = _dataService.GetCompanies();
+                return Ok(results);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+        [HttpGet("GetPolicyConfiguration")]
+        public ActionResult<PolicyConfigurationDTO> GetPolicyConfiguration()
+        {
+            try
+            {
+                var results = _dataService.GetPolicyConfiguration();
+                return Ok(results);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpGet("GetPlacementPercentage")]
+        public ActionResult<double> GetPlacementPercent()
+        {
+            try
+            {
+                var results = _dataService.GetPlacementPercent();
+                return Ok(results);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
     }
 }
