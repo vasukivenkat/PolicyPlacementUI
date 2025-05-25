@@ -9,6 +9,8 @@
   <ItemGroup>
     <Compile Remove="Controllers\ExtraFeaturesController.cs" />
     <Compile Remove="Controllers\WeatherForecastController.cs" />
+    <Compile Remove="DTOs\EligibilityRequestDTO.cs" />
+    <Compile Remove="DTOs\SingleEligibilityRequestDTO.cs" />
     <Compile Remove="WeatherForecast.cs" />
   </ItemGroup>
 
