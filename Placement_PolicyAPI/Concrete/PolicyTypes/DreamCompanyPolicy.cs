@@ -1,9 +1,9 @@
 ﻿using PolicyAPI.Abstract;
 using PolicyAPI.DTOs;
 
-namespace PolicyAPI.Concrete
+namespace PolicyAPI.Concrete.PolicyTypes
 {
-    public class DreamCompanyPolicy: IEligibilityPolicy
+    public class DreamCompanyPolicy : IEligibilityPolicy
     {
         public PolicyEvaluationResultDTO Evaluate(StudentDTO student, CompanyDTO company, PolicyConfigurationDTO policies, double currentPlacementPercentage)
         {

@@ -1,9 +1,9 @@
 ﻿using PolicyAPI.Abstract;
 using PolicyAPI.DTOs;
 
-namespace PolicyAPI.Concrete
+namespace PolicyAPI.Concrete.PolicyTypes
 {
-    public class DreamOfferPolicy: IEligibilityPolicy
+    public class DreamOfferPolicy : IEligibilityPolicy
     {
         public PolicyEvaluationResultDTO Evaluate(StudentDTO student, CompanyDTO company, PolicyConfigurationDTO policies, double currentPlacementPercentage)
         {
@@ -13,12 +13,12 @@ namespace PolicyAPI.Concrete
             if (company.SalaryOffered >= student.DreamOffer)
             {
                 return PolicyEvaluationResultDTO.Success(
-                    $"Company salary ₹{company.SalaryOffered:N0} meets dream offer ₹{student.DreamOffer:N0}",false
+                    $"Company salary ₹{company.SalaryOffered:N0} meets dream offer ₹{student.DreamOffer:N0}", false
                 );
             }
 
             return PolicyEvaluationResultDTO.Failure(
-                $"Company salary ₹{company.SalaryOffered:N0} below dream offer ₹{student.DreamOffer:N0}",true
+                $"Company salary ₹{company.SalaryOffered:N0} below dream offer ₹{student.DreamOffer:N0}", true
             );
         }
 

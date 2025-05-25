@@ -1,9 +1,9 @@
 ﻿using PolicyAPI.Abstract;
 using PolicyAPI.DTOs;
 
-namespace PolicyAPI.Concrete
+namespace PolicyAPI.Concrete.PolicyTypes
 {
-    public class PlacementPercentagePolicy: IEligibilityPolicy
+    public class PlacementPercentagePolicy : IEligibilityPolicy
     {
         public PolicyEvaluationResultDTO Evaluate(StudentDTO student, CompanyDTO company, PolicyConfigurationDTO policies, double currentPlacementPercentage)
         {
@@ -13,7 +13,7 @@ namespace PolicyAPI.Concrete
             if (currentPlacementPercentage < policies.PlacementPercentage.TargetPercentage)
             {
                 return PolicyEvaluationResultDTO.Failure(
-                    $"Current placement percentage {currentPlacementPercentage:F1}% below target {policies.PlacementPercentage.TargetPercentage}%",false
+                    $"Current placement percentage {currentPlacementPercentage:F1}% below target {policies.PlacementPercentage.TargetPercentage}%", false
                 );
             }
 

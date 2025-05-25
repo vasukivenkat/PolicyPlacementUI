@@ -1,4 +1,5 @@
 ﻿using PolicyAPI.Abstract;
+using PolicyAPI.Concrete.PolicyTypes;
 using PolicyAPI.DTOs;
 
 namespace PolicyAPI.Concrete
@@ -31,15 +32,7 @@ namespace PolicyAPI.Concrete
                 return result;
             }
 
-            var policylist = new List<IEligibilityPolicy>
-            {
-                new CgpaThresholdPolicy(),
-                new DreamCompanyPolicy(),
-                new DreamOfferPolicy(),
-                new PlacementPercentagePolicy(),
-                new MaxCompaniesPolicy(),
-                new OfferTierPolicy(),
-            };
+            var policylist = PolicyListInitializer.InitializePolicyList();
 
             for (int i = 0; i < policylist.Count; i++)
             {
